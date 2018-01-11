@@ -12,9 +12,9 @@ import { setContext, getLocation, getRouteData } from './utils'
 import { createStore } from './store.js'
 
 /* Plugins */
-import nuxt_plugin_axios_de223d44 from 'nuxt_plugin_axios_de223d44' // Source: ./axios.js
+import nuxt_plugin_axios_3114009c from 'nuxt_plugin_axios_3114009c' // Source: ./axios.js
 import nuxt_plugin_utils_f96c918c from 'nuxt_plugin_utils_f96c918c' // Source: ../plugins/utils
-import nuxt_plugin_http_56caecdf from 'nuxt_plugin_http_56caecdf' // Source: ../plugins/http
+import nuxt_plugin_elementui_69306e1c from 'nuxt_plugin_elementui_69306e1c' // Source: ../plugins/element-ui
 
 
 // Component: <no-ssr>
@@ -153,9 +153,9 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
-  if (typeof nuxt_plugin_axios_de223d44 === 'function') await nuxt_plugin_axios_de223d44(app.context, inject)
+  if (typeof nuxt_plugin_axios_3114009c === 'function') await nuxt_plugin_axios_3114009c(app.context, inject)
   if (typeof nuxt_plugin_utils_f96c918c === 'function') await nuxt_plugin_utils_f96c918c(app.context, inject)
-  if (typeof nuxt_plugin_http_56caecdf === 'function') await nuxt_plugin_http_56caecdf(app.context, inject)
+  if (typeof nuxt_plugin_elementui_69306e1c === 'function') await nuxt_plugin_elementui_69306e1c(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first

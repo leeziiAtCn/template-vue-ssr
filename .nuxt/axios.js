@@ -124,6 +124,14 @@ export default (ctx, inject) => {
   
 
   
+  // Custom request interceptor
+  const reqInter = function(config, ctx) {
+  config.headers['token'] = ctx.store.state.counter
+  ctx.store.commit('increment')
+  return config
+}
+  axios.interceptors.request.use(config => reqInter(config, ctx))
+  
 
   
 

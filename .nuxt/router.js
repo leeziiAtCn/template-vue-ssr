@@ -3,7 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _a2cd61b8 = () => import('../pages/home/index.vue' /* webpackChunkName: "pages/home/index" */).then(m => m.default || m)
+const _28eaba7c = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _e024f03c = () => import('../pages/home/index.vue' /* webpackChunkName: "pages/home/index" */).then(m => m.default || m)
 
 
 
@@ -40,8 +41,13 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
+			path: "/",
+			component: _28eaba7c,
+			name: "index"
+		},
+		{
 			path: "/home",
-			component: _a2cd61b8,
+			component: _e024f03c,
 			name: "home"
 		}
     ],

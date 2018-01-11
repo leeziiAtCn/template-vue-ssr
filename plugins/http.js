@@ -1,6 +1,9 @@
-import Vue from 'vue'
-import axios from 'axios'
-Vue.use({
-    install: Vue => Vue.prototype.$http = axios
-})
-export const http = axios
+function requestInterceptor (config, ctx) {
+  config.headers['token'] = ctx.store.state.counter
+  ctx.store.commit('increment')
+  return config
+}
+
+module.exports = {
+  requestInterceptor
+}
